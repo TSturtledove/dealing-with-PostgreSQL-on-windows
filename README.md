@@ -1,6 +1,6 @@
-#How to find PostgreSQL for the Windows user,
-##An informal walkthrough for the confused from one just as bewildered,
-###By Robert Tortorelli
+# How to find PostgreSQL for the Windows user,
+## An informal walkthrough for the confused from one just as bewildered,
+### By Robert Tortorelli
 For reference I am running windows 8.1 on an Asus ROG G750JX,
 
 Beginning with the download of postgreSQL we find out selves at this page.
@@ -16,7 +16,7 @@ wait, what?
 
 Now things get interesting as we are offered two download options, the "Interactive installer by EnterpriseDB" and the "Graphical installer by BigSQL".  I recommend following the second link (the graphical installer by BigSQL) as you'll end up with a SQL shell terminal that is very similar to what our partners on macs have when using the postgreSQL app.
 
-##Interactive installer by EnterpriseDB -
+## Interactive installer by EnterpriseDB -
 if you choose this option you'll be directed to this screen
 <img src="img/firstone1.png">
 
@@ -44,7 +44,7 @@ and the locale to be used as a default for the server to run on
 Once all of that is set you will be ready to install
 <img src="img/firstone8.png">
 
-###Important: Clicking "Next" now will start the download, so be sure you entered everything you wanted correctly
+### Important: Clicking "Next" now will start the download, so be sure you entered everything you wanted correctly
 <img src="img/firstone9.png">
 
 
@@ -75,7 +75,7 @@ You can just hit enter to go through the options here but you need to enter the 
 <img src="img/firstone17.png">
 
 
-##Graphical installer by BigSQL -
+## Graphical installer by BigSQL -
 if you choose this option you'll be directed to this screen
 <img src="img/secondone0.png">
 
