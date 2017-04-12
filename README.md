@@ -146,6 +146,34 @@ If you can't find "PSQL" in the "PostgreSQL" folder, then you can search for "PS
 and pin that to your start or taskbar.
 
 
-For the second option (the Graphical installer by BigSQL), when you download the program it may not let you set the "user" but instead default to "postgres" as the user.  If this happens go into your knexfile.js file for the project you're working on and add "user:'postgres' " under the "development" section.  This will let you migrate files as normal.
+One last thing you'll want to do when you just start using postgreSQL is to check which "Roles" you have available.  You can do this by using the command "\du".
 
-<img src="img/secondone13.png">
+<img src="img/rolesetup01.png">
+
+If you are like me the only role postgreSQL has will be the "postgres" role.  You can also see this by using the command, "SELECT * FROM pg_roles".
+
+<img src="img/rolesetup02.png">
+
+If postgres is the only role in postgreSQL then you are going to get an error when you try to run certain migrate or seed commands in the git command line terminal.  This error occurs because the knex files are setup to look for a role that shares a name with the current active user (in this case me, Robert Tortorelli).
+
+<img src="img/rolesetup06.png">
+
+To get around this you need to add a new role with named the same as your user name to the roles in postgreSQL.  To do this you'll want to use the command line that follows substituting your user name for "tester" in the command , "CREATE ROLE tester SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYPASSRLS;"
+
+<img src="img/rolesetup03.png">
+
+When run this will add a new role to postgreSQL.
+
+<img src="img/rolesetup04.png">
+
+If you have a user name like mine you can input it inside quotation marks to get it to work.
+
+<img src="img/rolesetup05.png">
+
+With the new role added you should be able to use the knex migrate and seed functions.
+
+<img src="img/rolesetup07.png">
+
+If you want to make a database with this new role as the owner you will need to run a command to set the role which is simply "SET ROLE" followed by the name of the role you want to create the database under.
+
+<img src="img/rolesetup08.png">
